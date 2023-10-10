@@ -1,54 +1,29 @@
-# Astro Starter Kit: Basics
+# Sheets-cms
 
-```sh
-npm create astro@latest -- --template basics
+This repo connects Google Sheet data to an Astro website using [opensheet](https://github.com/benborgers/opensheet).
+
+To get started, clone fork or download this repo and run `npm install` in the directory to install dependencies.
+
+To build the project run locally `npm run dev` and open [localhost:4321](http://localhost:4321) in your browser.
+
+For further info and documentation on Astro, check out the [Astro docs](https://docs.astro.build/).
+
+## Finding the sheet id
+
+The sheet ID is the long string of characters in the URL of your Google Sheet.
+
+![sheets-id](./public/id.png "sheets-id")
+
+## Note: You need headers
+
+Note that you will need headers in your sheet for the data to render properly. Drag the first row down to the second row to create headers.
+
+![sheets-header](./public/header.png "sheets-header")
+
+## 📝 Editing content
+
+The content on the index page is rendered via the `src/Sheets.astro` component. Edit the `response` URL like so:
+
+```astro
+"https://opensheet.elk.sh/[GOOGLESHEET-ID-HERE]/1"
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
